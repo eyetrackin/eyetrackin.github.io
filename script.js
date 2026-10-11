@@ -9,7 +9,7 @@ const CONFIG = {
   domain: "https://eyetrackin.com",
   status: { en: "Currently in Development", es: "Actualmente en desarrollo" },
 
-  contactEmail: "admin.eyetrackin@gmail.com",
+  contactEmail: "info@eyetrackin.com",
 
   defaultLang: "en",
 
@@ -26,7 +26,7 @@ const CONFIG = {
     { id: "reddit",    name: "Reddit",    handle: "r/eyetrackin",    url: "https://www.reddit.com/r/eyetrackin/",                   enabled: true },
     { id: "reddit",    name: "Reddit",    handle: "u/eyetrackin",    url: "https://www.reddit.com/user/eyetrackin/",                enabled: true, footer: false },
     { id: "facebook",  name: "Facebook",  handle: "EyeTrackIn",      url: "https://www.facebook.com/profile.php?id=61595061999948", enabled: true },
-    { id: "tiktok",    name: "TikTok",    handle: "",                url: "",                                                       enabled: true, soon: true },
+    { id: "tiktok",    name: "TikTok",    handle: "@eyetrackin",     url: "https://www.tiktok.com/@eyetrackin",                    enabled: true },
   ],
 };
 

@@ -40,7 +40,7 @@ Everything that is likely to change lives in the `CONFIG` object at the top of `
 | `defaultLang` | Fallback language when the browser language is not supported |
 | `social[]` | Social networks, shown in array order in Community and the footer |
 
-Each `social[]` entry supports `enabled` (`false` = never rendered), `soon: true` (non-clickable "Coming soon" card, used for TikTok) and `footer: false` (hide from the footer icon row).
+Each `social[]` entry supports `enabled` (`false` = never rendered), `soon: true` (non-clickable "Coming soon" card) and `footer: false` (hide from the footer icon row).
 
 ## Languages
 
@@ -63,7 +63,6 @@ All asset paths are relative, so the site works at both `eyetrackin.github.io` a
 
 ## Pending
 
-- Open the TikTok account and replace its "Coming soon" entry with the real URL.
 - Replace the temporary contact email with a corporate address when available.
 - Provide a dedicated 1200×630 social-sharing image (the current Open Graph image is `Icon.png`).
 - Future pages: documentation, downloads, news.
