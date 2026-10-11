@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EyeTrackIn | From Gaze to Insights</title>
+  <meta name="description" content="EyeTrackIn is desktop eye-tracking software for gaze recording, visualization, and analysis, designed to streamline research workflows. Currently in development.">
+  <meta name="theme-color" content="#07122b">
+  <link rel="canonical" href="https://eyetrackin.com/">
+
+  <link rel="icon" href="assets/icons/Icon.ico" sizes="any">
+  <link rel="icon" href="assets/icons/Icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icons/Icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="EyeTrackIn">
+  <meta property="og:title" content="EyeTrackIn | From Gaze to Insights">
+  <meta property="og:description" content="Eye-tracking software for gaze recording, visualization, and analysis. Currently in development.">
+  <meta property="og:url" content="https://eyetrackin.com/">
+  <meta property="og:image" content="https://eyetrackin.com/assets/icons/Icon.png">
+  <meta property="og:image:alt" content="EyeTrackIn logo: a stylized eye with tracking crosshair marks">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="EyeTrackIn | From Gaze to Insights">
+  <meta name="twitter:description" content="Eye-tracking software for gaze recording, visualization, and analysis. Currently in development.">
+  <meta name="twitter:image" content="https://eyetrackin.com/assets/icons/Icon.png">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" data-i18n-attr="aria-label:brand.aria" aria-label="EyeTrackIn – back to top">
+        <img src="assets/images/EyetrackIn_dark.png" width="3208" height="783" alt="EyeTrackIn – From Gaze to Insights">
+      </a>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary" data-i18n-attr="aria-label:nav.primary">
+        <ul>
+          <li><a href="#home" data-i18n="nav.home">Home</a></li>
+          <li><a href="#features" data-i18n="nav.features">Features</a></li>
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li><a href="#community" data-i18n="nav.community">Community</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language" data-i18n-attr="aria-label:lang.label" hidden>
+        <button type="button" data-lang="en" lang="en" aria-label="English" title="English">EN</button>
+        <button type="button" data-lang="es" lang="es" aria-label="Español" title="Español">ES</button>
+      </div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span class="menu-bars" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="status-pill"><span class="dot" aria-hidden="true"></span><span data-config="status">Currently in Development</span></p>
+          <h1 id="hero-title">EyeTrackIn</h1>
+          <p class="hero-slogan">From Gaze to Insights</p>
+          <p class="hero-lead" data-i18n="hero.lead">Eye-tracking software for gaze recording, visualization, and analysis.</p>
+          <p class="hero-sub" data-i18n="hero.sub">EyeTrackIn aims to streamline the workflows of acquiring, organizing, and analyzing gaze data, so researchers can spend less time on tooling and more time on questions.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#features" data-i18n="hero.cta1">Explore Features</a>
+            <a class="btn btn-ghost" href="#community" data-i18n="hero.cta2">Follow Our Progress</a>
+          </div>
+        </div>
+
+        <figure class="hero-visual">
+          <svg viewBox="0 0 560 420" role="img" aria-labelledby="viz-title viz-desc">
+            <title id="viz-title" data-i18n="viz.title">Conceptual gaze visualization</title>
+            <desc id="viz-desc" data-i18n="viz.desc">A schematic stimulus layout overlaid with a heat map, fixation circles of different sizes, and lines connecting them in sequence.</desc>
+            <defs>
+              <radialGradient id="heat" cx="50%" cy="50%" r="50%">
+                <stop offset="0" stop-color="#ff5d5d" stop-opacity=".55"/>
+                <stop offset=".35" stop-color="#ffd24a" stop-opacity=".32"/>
+                <stop offset=".7" stop-color="#00d1ff" stop-opacity=".16"/>
+                <stop offset="1" stop-color="#00d1ff" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="trail" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#00d1ff"/>
+                <stop offset="1" stop-color="#3d8bff"/>
+              </linearGradient>
+              <clipPath id="panel"><rect x="10" y="10" width="540" height="400" rx="20"/></clipPath>
+            </defs>
+
+            <rect x="10" y="10" width="540" height="400" rx="20" fill="#0c1f4a" stroke="#27407f" stroke-width="1.5"/>
+            <g clip-path="url(#panel)">
+              <!-- schematic stimulus -->
+              <g fill="#17306b">
+                <rect x="40" y="38" width="480" height="30" rx="8"/>
+                <rect x="40" y="90" width="230" height="150" rx="10"/>
+                <rect x="292" y="90" width="228" height="14" rx="7"/>
+                <rect x="292" y="116" width="190" height="14" rx="7"/>
+                <rect x="292" y="142" width="215" height="14" rx="7"/>
+                <rect x="292" y="168" width="160" height="14" rx="7"/>
+                <rect x="292" y="194" width="205" height="14" rx="7"/>
+                <rect x="40" y="262" width="150" height="100" rx="10"/>
+                <rect x="206" y="262" width="150" height="100" rx="10"/>
+                <rect x="372" y="262" width="148" height="100" rx="10"/>
+              </g>
+              <!-- heat map -->
+              <circle cx="210" cy="150" r="100" fill="url(#heat)"/>
+              <circle cx="400" cy="200" r="110" fill="url(#heat)"/>
+              <circle cx="300" cy="290" r="80" fill="url(#heat)"/>
+              <circle cx="110" cy="110" r="66" fill="url(#heat)"/>
+              <!-- scanpath -->
+              <polyline class="scanpath" points="110,110 210,150 330,120 400,200 440,320 300,280 170,300" fill="none" stroke="url(#trail)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" pathLength="1"/>
+              <g class="fixations" fill="#00d1ff" fill-opacity=".28" stroke="#7fe6ff" stroke-width="2">
+                <circle cx="110" cy="110" r="14"/>
+                <circle cx="210" cy="150" r="22"/>
+                <circle cx="330" cy="120" r="12"/>
+                <circle cx="400" cy="200" r="26"/>
+                <circle cx="440" cy="320" r="10"/>
+                <circle cx="300" cy="280" r="18"/>
+                <circle cx="170" cy="300" r="16"/>
+              </g>
+              <g fill="#e8f7ff" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">
+                <text x="110" y="114">1</text><text x="210" y="154">2</text><text x="330" y="124">3</text>
+                <text x="400" y="204">4</text><text x="440" y="324">5</text><text x="300" y="284">6</text><text x="170" y="304">7</text>
+              </g>
+              <circle class="gaze-dot" r="6" fill="#fff"/>
+            </g>
+          </svg>
+          <figcaption data-i18n="viz.caption">Conceptual illustration with simulated data. Not real research results.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="section section-light" aria-labelledby="features-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow" data-i18n="nav.features">Features</p>
+          <h2 id="features-title" data-i18n="features.title">Designed for Eye-Tracking Workflows</h2>
+          <p class="section-intro" data-i18n="features.intro">These are the areas EyeTrackIn is being built around. The software is under active development, and capabilities will be announced as they are completed.</p>
+        </header>
+
+        <ul class="card-grid">
+          <li class="card">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5" fill="currentColor" stroke="none"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3"/></svg></span>
+            <h3 data-i18n="f1.title">Gaze Recording</h3>
+            <p data-i18n="f1.text">Eye-tracking data acquisition and recording, aimed at capturing gaze data reliably during sessions.</p>
+          </li>
+          <li class="card">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M7 13h10"/></svg></span>
+            <h3 data-i18n="f2.title">Session Management</h3>
+            <p data-i18n="f2.text">Organization and management of recording sessions, keeping your data structured and easy to find.</p>
+          </li>
+          <li class="card">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 20h18"/><rect x="5" y="11" width="3.5" height="7" rx="1"/><rect x="10.25" y="6" width="3.5" height="12" rx="1"/><rect x="15.5" y="9" width="3.5" height="9" rx="1"/></svg></span>
+            <h3 data-i18n="f3.title">Data Visualization</h3>
+            <p data-i18n="f3.text">Exploration of gaze data through visual representations such as fixations, scanpaths, and heat maps.</p>
+          </li>
+          <li class="card">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5.5 5.5"/><path d="M7.5 11.5 9.5 9l2 2 2-3"/></svg></span>
+            <h3 data-i18n="f4.title">Gaze Analysis</h3>
+            <p data-i18n="f4.text">Tools and workflows for examining eye-tracking data and turning it into meaningful findings.</p>
+          </li>
+          <li class="card">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5.5 9.5A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-2.5L14 9V3"/><path d="M7.5 15h9"/></svg></span>
+            <h3 data-i18n="f5.title">Research-Oriented Workflow</h3>
+            <p data-i18n="f5.text">A unified environment designed with research needs in mind, from acquisition to analysis.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section section-mist" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow" data-i18n="nav.about">About</p>
+          <h2 id="about-title" data-i18n="about.title">About EyeTrackIn</h2>
+        </div>
+        <div class="about-body">
+          <p data-i18n="about.p1">EyeTrackIn is a desktop software project focused on simplifying the acquisition, organization, visualization, and analysis of eye-tracking data.</p>
+          <p data-i18n="about.p2">It is built with research in mind: the goal is to transform raw gaze data into useful information, within a single, coherent environment.</p>
+          <p data-i18n="about.p3">The project is intended for researchers, professionals, developers, and anyone interested in visual attention and human-computer interaction.</p>
+          <ul class="audience" aria-label="Who EyeTrackIn is for" data-i18n-attr="aria-label:about.audience">
+            <li data-i18n="aud.1">Researchers</li>
+            <li data-i18n="aud.2">Professionals</li>
+            <li data-i18n="aud.3">Developers</li>
+            <li data-i18n="aud.4">Curious minds</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMUNITY -->
+    <section id="community" class="section section-dark" aria-labelledby="community-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow" data-i18n="nav.community">Community</p>
+          <h2 id="community-title" data-i18n="community.title">Connect with EyeTrackIn</h2>
+          <p class="section-intro" data-i18n="community.intro">Follow EyeTrackIn for development updates, software demonstrations, tutorials, and eye-tracking insights.</p>
+        </header>
+        <ul class="social-grid" data-social-list="community"></ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section-light" aria-labelledby="contact-title">
+      <div class="container contact-wrap">
+        <header class="section-head">
+          <p class="eyebrow" data-i18n="nav.contact">Contact</p>
+          <h2 id="contact-title" data-i18n="contact.title">Get in Touch</h2>
+          <p class="section-intro" data-i18n="contact.intro">Have a question about the project, or interested in eye-tracking research and tooling? We would be glad to hear from you.</p>
+        </header>
+        <div class="contact-actions" id="contact-actions"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/images/EyetrackIn_dark.png" width="3208" height="783" alt="EyeTrackIn – From Gaze to Insights">
+        </div>
+        <nav aria-label="Footer" data-i18n-attr="aria-label:nav.footer">
+          <ul class="footer-nav">
+            <li><a href="#home" data-i18n="nav.home">Home</a></li>
+            <li><a href="#features" data-i18n="nav.features">Features</a></li>
+            <li><a href="#about" data-i18n="nav.about">About</a></li>
+            <li><a href="#community" data-i18n="nav.community">Community</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </nav>
+        <ul class="footer-social" data-social-list="footer" aria-label="EyeTrackIn on social media" data-i18n-attr="aria-label:footer.social"></ul>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> EyeTrackIn. <span data-i18n="footer.rights">All rights reserved.</span></p>
+        <p><a data-domain href="https://eyetrackin.com">eyetrackin.com</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
