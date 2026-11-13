@@ -16,7 +16,8 @@ const CONFIG = {
   /* Social networks, displayed in this order.
      enabled: false  -> never rendered (use for unconfirmed accounts)
      soon: true      -> rendered as a non-clickable "Coming soon" card
-     footer: false   -> hidden from the footer icon row */
+     footer: false   -> hidden from the footer icon row
+     community: false -> hidden from the Community cards */
   social: [
     { id: "github",    name: "GitHub",    handle: "eyetrackin",      url: "https://github.com/eyetrackin",                          enabled: true },
     { id: "youtube",   name: "YouTube",   handle: "@EyeTrackIn",     url: "https://www.youtube.com/@EyeTrackIn",                    enabled: true },
@@ -27,6 +28,7 @@ const CONFIG = {
     { id: "reddit",    name: "Reddit",    handle: "u/eyetrackin",    url: "https://www.reddit.com/user/eyetrackin/",                enabled: false, footer: false },
     { id: "facebook",  name: "Facebook",  handle: "EyeTrackIn",      url: "https://www.facebook.com/profile.php?id=61595061999948", enabled: true },
     { id: "tiktok",    name: "TikTok",    handle: "@eyetrackin",     url: "https://www.tiktok.com/@eyetrackin",                    enabled: true },
+    { id: "linktree",  name: "Linktree",  handle: "eyetrackin",      url: "https://linktr.ee/eyetrackin",                           enabled: true, community: false },
   ],
 };
 
@@ -78,6 +80,7 @@ const I18N = {
     "contact.intro": "Have a question about the project, or interested in eye-tracking research and tooling? We would be glad to hear from you.",
     "contact.email": "Send us an email",
     "footer.rights": "All rights reserved.",
+    "footer.privacy": "Privacy",
   },
   es: {
     "meta.title": "EyeTrackIn | From Gaze to Insights",
@@ -123,6 +126,7 @@ const I18N = {
     "contact.intro": "¿Tienes alguna pregunta sobre el proyecto o te interesa la investigación y las herramientas de eye tracking? Nos encantará saber de ti.",
     "contact.email": "Escríbenos un correo",
     "footer.rights": "Todos los derechos reservados.",
+    "footer.privacy": "Privacidad",
   },
 };
 
@@ -183,6 +187,7 @@ const ICONS = {
   facebook: '<circle cx="12" cy="12" r="10" fill="currentColor"/><path d="M13.2 21.9v-7.6h2.5l.4-3h-2.9V9.4c0-.9.3-1.4 1.5-1.4h1.5V5.3c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.3H8v3h2.3v7.6z" fill="#07122b"/>',
   linkedin: '<rect x="2.5" y="2.5" width="19" height="19" rx="3" fill="currentColor"/><path d="M7 10v7M7 7v.1M11 17v-7M11 13c0-2 1.2-3 2.7-3s2.3 1 2.3 2.8V17" fill="none" stroke="#07122b" stroke-width="2" stroke-linecap="round"/>',
   x: '<path d="M4 4l16 16M20 4 4 20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>',
+  linktree: '<path fill="currentColor" d="m13.73635 5.85251 4.00467-4.11665 2.3248 2.3808-4.20064 4.00466h5.9085v3.30473h-5.9365l4.22865 4.10766-2.3248 2.3338L12.0005 12.099l-5.74052 5.76852-2.3248-2.3248 4.22864-4.10766h-5.9375V8.12132h5.9085L3.93417 4.11666l2.3248-2.3808 4.00468 4.11665V0h3.4727zm-3.4727 10.30614h3.4727V24h-3.4727z"/>',
   tiktok: '<path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5M14 3c.3 2.6 2 4.3 4.5 4.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>',
 };
 
@@ -246,7 +251,7 @@ function renderSocial() {
   const networks = visibleNetworks();
 
   document.querySelectorAll('[data-social-list="community"]').forEach((list) => {
-    list.replaceChildren(...networks.map(socialCard));
+    list.replaceChildren(...networks.filter((s) => s.community !== false).map(socialCard));
   });
 
   document.querySelectorAll('[data-social-list="footer"]').forEach((list) => {
