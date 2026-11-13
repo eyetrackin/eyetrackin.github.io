@@ -299,3 +299,10 @@ h1, h2, h3, p { margin: 0; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .gaze-dot { display: none; }
 }
+
+/* Legal / privacy page */
+.legal { max-width: 720px; margin: 0 auto; padding: 3rem 0 4rem; }
+.legal h1 { margin-bottom: 1rem; }
+.legal h2 { margin: 2rem 0 .5rem; }
+.legal p { margin: 0 0 1rem; line-height: 1.6; }
+.legal hr { margin: 2.5rem 0; border: 0; border-top: 1px solid rgba(255,255,255,.15); }
