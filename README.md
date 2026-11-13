@@ -11,10 +11,14 @@ Plain HTML5, CSS3 and vanilla JavaScript. No build step and no external dependen
 
 ```text
 index.html        Page structure and SEO metadata
+privacy.html      Privacy page (English and Spanish)
+404.html          Custom "page not found" page (served by GitHub Pages)
+robots.txt        Crawler rules and sitemap location
+sitemap.xml       Sitemap for search engines
 style.css         Styles (tokens, layout, components, motion)
 script.js         CONFIG object + menu, social rendering, footer year
 assets/images/    Logo variants (EyetrackIn.png, EyetrackIn_dark.png)
-assets/icons/     Favicon / app icon (Icon.ico, Icon.png)
+assets/icons/     Favicon / app icons (favicon.ico, favicon.png, Icon.ico, Icon.png, cropped_circle_image.png)
 ```
 
 `EyetrackIn_dark.png` (light wordmark) is used on the dark header, hero and footer. `EyetrackIn.png` (navy wordmark) is for light backgrounds. Both are used unmodified.
@@ -63,6 +67,7 @@ All asset paths are relative, so the site works at both `eyetrackin.github.io` a
 
 ## Pending
 
-- Replace the temporary contact email with a corporate address when available.
 - Provide a dedicated 1200×630 social-sharing image (the current Open Graph image is `Icon.png`).
+- Provide a dedicated 180×180 `apple-touch-icon` (currently `favicon.png`).
+- Add new pages to `sitemap.xml` as they are created.
 - Future pages: documentation, downloads, news.
