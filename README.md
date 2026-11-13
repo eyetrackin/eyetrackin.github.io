@@ -15,6 +15,8 @@ privacy.html      Privacy page (English and Spanish)
 404.html          Custom "page not found" page (served by GitHub Pages)
 robots.txt        Crawler rules and sitemap location
 sitemap.xml       Sitemap for search engines
+.well-known/      security.txt (vulnerability reporting contact; renew `Expires` yearly)
+.nojekyll         Makes GitHub Pages serve dot-folders like .well-known
 style.css         Styles (tokens, layout, components, motion)
 script.js         CONFIG object + menu, social rendering, footer year
 assets/images/    Logo variants (EyetrackIn.png, EyetrackIn_dark.png)
@@ -64,6 +66,12 @@ All asset paths are relative, so the site works at both `eyetrackin.github.io` a
 
 1. Configure DNS at your registrar as described in the [GitHub Pages docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
 2. Add `eyetrackin.com` under **Settings → Pages → Custom domain** (GitHub creates a `CNAME` file), then enable **Enforce HTTPS**.
+
+## Security
+
+- Each page sets a strict Content-Security-Policy and a referrer policy through `<meta>` tags (GitHub Pages cannot set HTTP headers). The site has no inline scripts or styles, so do not add any; if you load external resources, add their domains to the policy.
+- `frame-ancestors`, HSTS, `X-Content-Type-Options` and `Permissions-Policy` can only be sent as headers. GitHub Pages enforces HTTPS with **Enforce HTTPS**; for the rest, put the site behind a CDN such as Cloudflare.
+- External links use `rel="noopener noreferrer"`.
 
 ## Pending
 
